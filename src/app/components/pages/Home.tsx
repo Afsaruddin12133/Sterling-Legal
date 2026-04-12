@@ -1,28 +1,32 @@
-import { Link } from "react-router";
+import { Award, ChevronRight, Scale, Shield, Star, Users } from "lucide-react";
 import { motion } from "motion/react";
-import { Scale, Shield, Users, Award, Star, ChevronRight } from "lucide-react";
+import { Link } from "react-router";
 
 export function Home() {
   const services = [
     {
       icon: Scale,
       title: "Corporate Law",
-      description: "Comprehensive legal support for businesses of all sizes, from startups to enterprises.",
+      description:
+        "Comprehensive legal support for businesses of all sizes, from startups to enterprises.",
     },
     {
       icon: Users,
       title: "Family Law",
-      description: "Compassionate guidance through family matters with expertise and discretion.",
+      description:
+        "Compassionate guidance through family matters with expertise and discretion.",
     },
     {
       icon: Shield,
       title: "Immigration",
-      description: "Navigate complex immigration processes with experienced legal counsel.",
+      description:
+        "Navigate complex immigration processes with experienced legal counsel.",
     },
     {
       icon: Award,
       title: "Legal Advisory",
-      description: "Strategic legal advice tailored to your unique circumstances and goals.",
+      description:
+        "Strategic legal advice tailored to your unique circumstances and goals.",
     },
   ];
 
@@ -30,19 +34,22 @@ export function Home() {
     {
       name: "Sarah Mitchell",
       role: "CEO, TechVenture Inc.",
-      content: "Sterling Legal provided exceptional guidance during our merger. Their attention to detail and strategic thinking made all the difference.",
+      content:
+        "Sterling Legal provided exceptional guidance during our merger. Their attention to detail and strategic thinking made all the difference.",
       rating: 5,
     },
     {
       name: "David Chen",
       role: "Private Client",
-      content: "The team handled my immigration case with professionalism and care. I couldn't have asked for better representation.",
+      content:
+        "The team handled my immigration case with professionalism and care. I couldn't have asked for better representation.",
       rating: 5,
     },
     {
       name: "Emily Rodriguez",
       role: "Business Owner",
-      content: "Outstanding service from start to finish. They truly understand the needs of growing businesses.",
+      content:
+        "Outstanding service from start to finish. They truly understand the needs of growing businesses.",
       rating: 5,
     },
   ];
@@ -50,14 +57,14 @@ export function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100vh-5rem)] flex items-center bg-[var(--navy)]">
+      <section className="relative min-h-[calc(100vh-5rem)] flex items-center bg-primary">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1748050869060-c8d7a93bff71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBsYXd5ZXJzJTIwb2ZmaWNlfGVufDF8fHx8MTc3NTg0MTE0N3ww&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Professional legal office"
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--navy)] via-[var(--navy)]/95 to-[var(--navy)]/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20">
@@ -68,8 +75,8 @@ export function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h1
-                className="text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight"
-                style={{ fontFamily: 'var(--font-serif)', fontWeight: 600 }}
+                className="text-5xl md:text-6xl lg:text-7xl text-secondary mb-6 leading-tight"
+                style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
               >
                 Trusted Legal Solutions for Individuals & Businesses
               </h1>
@@ -79,9 +86,10 @@ export function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl text-gray-300 mb-8 leading-relaxed"
+              className="text-xl text-secondary/90 mb-8 leading-relaxed"
             >
-              Expert legal counsel with over 30 years of experience delivering results that matter.
+              Expert legal counsel with over 30 years of experience delivering
+              results that matter.
             </motion.p>
 
             <motion.div
@@ -91,7 +99,7 @@ export function Home() {
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--gold)] text-[var(--navy)] rounded hover:bg-[var(--gold-light)] transition-all hover:shadow-2xl hover:scale-105"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-black rounded hover:opacity-90 transition-all hover:shadow-2xl hover:scale-105"
                 style={{ fontWeight: 600 }}
               >
                 Book a Consultation
@@ -103,7 +111,7 @@ export function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-secondary">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -113,12 +121,12 @@ export function Home() {
             className="text-center mb-16"
           >
             <h2
-              className="text-4xl md:text-5xl text-[var(--navy)] mb-4"
-              style={{ fontFamily: 'var(--font-serif)', fontWeight: 600 }}
+              className="text-4xl md:text-5xl text-primary mb-4"
+              style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
             >
               Our Practice Areas
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray max-w-2xl mx-auto">
               Comprehensive legal services tailored to your needs
             </p>
           </motion.div>
@@ -134,23 +142,23 @@ export function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ y: -8 }}
-                  className="group p-8 bg-[var(--secondary)] rounded-lg hover:shadow-xl transition-all"
+                  className="group p-8 bg-secondary rounded-lg border border-gray/20 hover:shadow-xl transition-all"
                 >
-                  <div className="w-14 h-14 bg-[var(--navy)] rounded-lg flex items-center justify-center mb-6 group-hover:bg-[var(--gold)] transition-colors">
-                    <Icon className="w-7 h-7 text-white group-hover:text-[var(--navy)]" />
+                  <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center mb-6 transition-colors group-hover:opacity-90">
+                    <Icon className="w-7 h-7 text-secondary" />
                   </div>
                   <h3
-                    className="text-xl text-[var(--navy)] mb-3"
-                    style={{ fontFamily: 'var(--font-serif)', fontWeight: 600 }}
+                    className="text-xl text-primary mb-3"
+                    style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
                   >
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+                  <p className="text-gray leading-relaxed mb-4">
                     {service.description}
                   </p>
                   <Link
                     to="/services"
-                    className="inline-flex items-center gap-1 text-[var(--navy)] hover:text-[var(--gold)] transition-colors"
+                    className="inline-flex items-center gap-1 text-primary hover:opacity-80 transition-colors"
                     style={{ fontWeight: 500 }}
                   >
                     Learn More
@@ -164,7 +172,7 @@ export function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-[var(--secondary)]">
+      <section className="py-24 bg-secondary">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -174,54 +182,76 @@ export function Home() {
               transition={{ duration: 0.8 }}
             >
               <h2
-                className="text-4xl md:text-5xl text-[var(--navy)] mb-6"
-                style={{ fontFamily: 'var(--font-serif)', fontWeight: 600 }}
+                className="text-4xl md:text-5xl text-primary mb-6"
+                style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
               >
                 Why Choose Sterling Legal
               </h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                We combine decades of experience with a client-first approach to deliver exceptional legal outcomes.
+              <p className="text-lg text-gray mb-8 leading-relaxed">
+                We combine decades of experience with a client-first approach to
+                deliver exceptional legal outcomes.
               </p>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[var(--gold)] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Award className="w-6 h-6 text-[var(--navy)]" />
+                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Award className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-xl text-[var(--navy)] mb-2" style={{ fontFamily: 'var(--font-serif)', fontWeight: 600 }}>
+                    <h3
+                      className="text-xl text-primary mb-2"
+                      style={{
+                        fontFamily: "var(--font-serif)",
+                        fontWeight: 600,
+                      }}
+                    >
                       30+ Years Experience
                     </h3>
-                    <p className="text-gray-600">
-                      Proven track record of successful outcomes across diverse practice areas.
+                    <p className="text-gray">
+                      Proven track record of successful outcomes across diverse
+                      practice areas.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[var(--gold)] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 text-[var(--navy)]" />
+                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-xl text-[var(--navy)] mb-2" style={{ fontFamily: 'var(--font-serif)', fontWeight: 600 }}>
+                    <h3
+                      className="text-xl text-primary mb-2"
+                      style={{
+                        fontFamily: "var(--font-serif)",
+                        fontWeight: 600,
+                      }}
+                    >
                       Client-Focused
                     </h3>
-                    <p className="text-gray-600">
-                      Your goals are our priority. We provide personalized attention to every case.
+                    <p className="text-gray">
+                      Your goals are our priority. We provide personalized
+                      attention to every case.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[var(--gold)] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Users className="w-6 h-6 text-[var(--navy)]" />
+                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Users className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-xl text-[var(--navy)] mb-2" style={{ fontFamily: 'var(--font-serif)', fontWeight: 600 }}>
+                    <h3
+                      className="text-xl text-primary mb-2"
+                      style={{
+                        fontFamily: "var(--font-serif)",
+                        fontWeight: 600,
+                      }}
+                    >
                       Expert Team
                     </h3>
-                    <p className="text-gray-600">
-                      Specialized attorneys with deep expertise in their respective fields.
+                    <p className="text-gray">
+                      Specialized attorneys with deep expertise in their
+                      respective fields.
                     </p>
                   </div>
                 </div>
@@ -246,7 +276,7 @@ export function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-secondary">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -256,12 +286,12 @@ export function Home() {
             className="text-center mb-16"
           >
             <h2
-              className="text-4xl md:text-5xl text-[var(--navy)] mb-4"
-              style={{ fontFamily: 'var(--font-serif)', fontWeight: 600 }}
+              className="text-4xl md:text-5xl text-primary mb-4"
+              style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
             >
               Client Testimonials
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray">
               See what our clients say about their experience
             </p>
           </motion.div>
@@ -274,21 +304,21 @@ export function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-8 bg-[var(--secondary)] rounded-lg"
+                className="p-8 bg-secondary rounded-lg border border-gray/20"
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[var(--gold)] text-[var(--gold)]" />
+                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 leading-relaxed italic">
+                <p className="text-text-dark mb-6 leading-relaxed italic">
                   "{testimonial.content}"
                 </p>
                 <div>
-                  <p className="text-[var(--navy)]" style={{ fontWeight: 600 }}>
+                  <p className="text-primary" style={{ fontWeight: 600 }}>
                     {testimonial.name}
                   </p>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <p className="text-sm text-gray">{testimonial.role}</p>
                 </div>
               </motion.div>
             ))}
@@ -297,7 +327,7 @@ export function Home() {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-20 bg-[var(--navy)]">
+      <section className="py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -306,17 +336,18 @@ export function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2
-              className="text-4xl md:text-5xl text-white mb-6"
-              style={{ fontFamily: 'var(--font-serif)', fontWeight: 600 }}
+              className="text-4xl md:text-5xl text-secondary mb-6"
+              style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
             >
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Schedule a consultation today and let us help you navigate your legal challenges.
+            <p className="text-xl text-secondary/90 mb-8 max-w-2xl mx-auto">
+              Schedule a consultation today and let us help you navigate your
+              legal challenges.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--gold)] text-[var(--navy)] rounded hover:bg-[var(--gold-light)] transition-all hover:shadow-2xl hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-black rounded hover:opacity-90 transition-all hover:shadow-2xl hover:scale-105"
               style={{ fontWeight: 600 }}
             >
               Book Your Consultation
