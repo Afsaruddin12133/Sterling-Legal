@@ -19,10 +19,44 @@
   <body>
     <div id="root"></div>
     <div id="chatbot-root"></div>
+    <div id="livechat-root"></div>
+
+    <!-- For comment box widget -->
+    <script src="https://unpkg.com/@getwidgets/commentbox-widget@latest/dist/commentbox-widget.umd.js"></script>
+    <script>
+      CommentBoxWidget.init({
+        widgetId: "e1eaf3fc-99c6-4017-abe5-75b4d8966115",
+      });
+    </script>
+    <!-- For contact form widget -->
+    <script src="https://unpkg.com/@getwidgets/contact-widget@latest/dist/contact-widget.umd.js"></script>
+    <script>
+      ContactFormWidget.init({
+        widgetId: "f3645d0a-21a3-49f2-be03-e123bd21b00f",
+        mode: "inline",
+      });
+    </script>
+    <!-- chatbot widget -->
     <script src="https://unpkg.com/@getwidgets/chatbot-widget@latest/dist/chatbot-widget.umd.js"></script>
     <script>
       ChatbotWidget.init({ widgetId: "84cb7ddf-49d0-4110-b0cf-4ab050d1dd6b" });
     </script>
+
+    <!-- live chatboard widget -->
+    <script src="https://unpkg.com/@getwidgets/live-chat-widget@latest/dist/live-chat-widget.umd.js"></script>
+    <script>
+      LiveChatWidget.init({
+        widgetId: "c8eafd0c-d8fd-4dc8-997c-cd5ead595d43",
+      });
+    </script>
+    <script>
+      LiveChatWidget.setUser({
+        name: "name",
+        email: "email",
+        unique_id: "id",
+      });
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
